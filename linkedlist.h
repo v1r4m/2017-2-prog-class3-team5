@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct node
+struct linked_list //자기참조 구조체에 대한 정의다.
 {
 	int value;
-	struct node *next;
-} NODE;
+	struct linked_list *next;
+};
 
-NODE* head = NULL; 
-NODE* tail = NULL;
+typedef struct linked_list NODE; //struct linked_list를 NODE라 재정의한다.
 
-
+typedef NODE * LINK; //NODE 포인터를 링크로 재정의한다.
